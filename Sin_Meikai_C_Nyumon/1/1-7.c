@@ -1,6 +1,7 @@
 #include <stdio.h>
+
 int main(void)
 {
-    printf("%d", 15 - 37);
+    printf("こんにちは。\a\a\a\n");
     return 0;
 }

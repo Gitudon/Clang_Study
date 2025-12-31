@@ -1,6 +1,7 @@
 #include <stdio.h>
+
 int main(void)
 {
-    printf("%d", 15 - 37);
+    printf("天\n地\n人\n");
     return 0;
 }
