@@ -28,16 +28,34 @@ int main(void)
         bunpu[tensu[i] / 10]++;
     }
     puts("\n---分布グラフ---");
-    printf("      100：");
-    for (j = 0; j < bunpu[10]; j++)
-        putchar('*');
-    putchar('\n');
-    for (i = 9; i >= 0; i--)
+    int max = 0;
+    for (i = 0; i <= 10; i++)
     {
-        printf("%3d ～%3d：", i * 10, i * 10 + 9);
-        for (j = 0; j < bunpu[i]; j++)
-            putchar('*');
+        if (bunpu[i] > max)
+            max = bunpu[i];
+    }
+    for (i = max; i >= 1; i--)
+    {
+        for (j = 0; j <= 10; j++)
+        {
+            if (bunpu[j] >= i)
+                printf(" * ");
+            else
+                printf("   ");
+        }
         putchar('\n');
+    }
+    for (i = 0; i <= 10; i++)
+    {
+        printf("---");
+    }
+    printf("-\n");
+    for (i = 0; i <= 10; i++)
+    {
+        if (i == 10)
+            printf("100");
+        else
+            printf("%2d ", i * 10);
     }
     return 0;
 }
