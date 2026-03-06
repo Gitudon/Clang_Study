@@ -19,6 +19,7 @@ int main(void)
             tmp = i;
             break;
         }
+        tmp = i + 1;
     }
 
     for (i = 0; i < tmp; i++)
